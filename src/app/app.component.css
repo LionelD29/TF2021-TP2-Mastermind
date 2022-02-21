@@ -19,22 +19,3 @@
     border: 1px solid black;
     gap: 0;
 }
-
-/* These below will move to other Angular components */
-
-.answer {
-    border: 1px solid black;
-}
-
-.encoder {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    border: 1px solid black;
-}
-
-.btn:hover {
-    filter: brightness(70%);
-}
-
