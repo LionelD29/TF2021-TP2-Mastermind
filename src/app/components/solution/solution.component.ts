@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Combination } from 'src/app/models/combination.model';
 
 @Component({
   selector: 'app-solution',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SolutionComponent implements OnInit {
 
+  @Input()
+  solution!: Combination;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.solution);
   }
 
 }
