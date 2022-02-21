@@ -58,11 +58,11 @@ td {
     border-color: orangered;
 }
 
-.wrong-color {
+.wrong-color, .reset {
     background-color: pink;
 }
 
-.correct {
+.correct, .send {
     background-color: lightgreen;
 }
 
