@@ -14,7 +14,6 @@ export class SolutionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.solution);
   }
 
 }

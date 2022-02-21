@@ -1,8 +1,9 @@
 .container {
     display: flex;
-    border: 1px solid black;
+    border: 1px solid white;
     width: fit-content;
     margin: 0 auto;
+    background-color: black;
 }
 
 .col {
@@ -16,6 +17,6 @@
 }
 
 .right {
-    border: 1px solid black;
+    border: 1px solid white;
     gap: 0;
 }

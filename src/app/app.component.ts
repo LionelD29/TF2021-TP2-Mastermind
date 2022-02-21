@@ -12,6 +12,9 @@ export class AppComponent implements OnInit {
   private colors: Array<Color> = [
     'green', 'blue', 'magenta', 'purple', 'yellow', 'maroon', 'orange'
   ];
+
+  solutionFound: boolean = true;
+
   combination: Combination = [];
 
   ngOnInit(): void {
@@ -25,6 +28,9 @@ export class AppComponent implements OnInit {
         status: undefined
       })
     }
-    console.log(this.combination);
+  }
+
+  onToggleSolution(): void {
+    this.solutionFound = !this.solutionFound;
   }
 }
