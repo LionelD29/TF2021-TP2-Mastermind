@@ -1,30 +1,30 @@
 <div class="encoder">
     <h3>Encoding panel</h3>
-    <table>
+    <table id="screen">
       <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
+        <td><div class="circle {{ currentCombination[0] ? currentCombination[0].color : '' }}"></div></td>
+        <td><div class="circle {{ currentCombination[1] ? currentCombination[1].color : '' }}"></div></td>
+        <td><div class="circle {{ currentCombination[2] ? currentCombination[2].color : '' }}"></div></td>
+        <td><div class="circle {{ currentCombination[3] ? currentCombination[3].color : '' }}"></div></td>
       </tr>
-    </table>
+    </table><!-- Screen -->
     
     <table>
       <tr>
-        <td><div class="btn circle green"></div></td>
-        <td><div class="btn circle blue"></div></td>
-        <td><div class="btn circle magenta"></div></td>
+        <td><div (click)="onSelectingColor('green')" class="btn circle green"></div></td>
+        <td><div (click)="onSelectingColor('blue')" class="btn circle blue"></div></td>
+        <td><div (click)="onSelectingColor('magenta')" class="btn circle magenta"></div></td>
       </tr>
       <tr>
-        <td><div class="btn circle purple"></div></td>
-        <td><div class="btn circle yellow"></div></td>
-        <td><div class="btn circle maroon"></div></td>
+        <td><div (click)="onSelectingColor('purple')" class="btn circle purple"></div></td>
+        <td><div (click)="onSelectingColor('yellow')" class="btn circle yellow"></div></td>
+        <td><div (click)="onSelectingColor('maroon')" class="btn circle maroon"></div></td>
       </tr>
       <tr>
-        <td class="btn reset">Reset</td>
-        <td><div class="btn circle orange"></div></td>
-        <td class="btn send">Send</td>
+        <td (click)="onResetCombination()" class="btn reset">Reset</td>
+        <td><div (click)="onSelectingColor('orange')" class="btn circle orange"></div></td>
+        <td (click)="onSendCombination()" class="btn send">Send</td>
       </tr>
-    </table>
+    </table><!-- encoding pad -->
 
   </div>

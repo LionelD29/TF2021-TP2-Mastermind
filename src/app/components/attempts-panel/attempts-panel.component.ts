@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Combination } from 'src/app/models/combination.model';
 
 @Component({
   selector: 'app-attempts-panel',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttemptsPanelComponent implements OnInit {
 
+  @Input()
+  attempts: Array<Combination> = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

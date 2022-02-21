@@ -1,63 +1,6 @@
 <h3>Attempts panel</h3>
 <table>
-    <tr>
-        <td class="correct"><div class="circle green"></div></td>
-        <td class="wrong-color"><div class="circle blue"></div></td>
-        <td class="wrong-position"><div class="circle blue"></div></td>
-        <td class="wrong-color"><div class="circle magenta"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-    </tr>
-    <tr>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
-        <td><div class="circle"></div></td>
+    <tr *ngFor="let attempt of attempts">
+        <td *ngFor="let cell of attempt"><div class="circle {{ cell.color }}"></div></td>
     </tr>
 </table>
