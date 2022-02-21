@@ -1,27 +1,16 @@
 # Mastermind
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+## Projet de la séance de travaux pratiques n°2
 
-## Development server
+Le TP consiste à recréer un jeu de mastermind en utilisant le framework Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Une combinaison de 4 couleurs parmi 7 disponibles est générée en début de partie par l'ordinateur.
+Le joueur possède alors 10 tentatives pour essayer de trouver cette combinaison (les bonnes couleurs, et dans le bon ordre).
 
-## Code scaffolding
+L'ordinateur fournira à chaque tentative des indices :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Fond vert si une couleur est à la bonne place
+* Fond rouge si une couleur n'est pas utilisée dans la combinaison à trouver, ou si elle était déjà trouvée (fond vert) ailleurs
+* Fond jaune si une couleur est utilisée dans la combinaison à trouver, mais pas à la bonne place
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Au bout de ces 10 tentatives, si le joueur a trouvé la bonne combinaison, il gagne, sinon il perd.
