@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-size: 0.9rem;
+}
+
+div {
+    padding: 10px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+.green {
+    background-color: rgb(130, 255, 130);
+    border-color: lime;
+}
+
+.blue {
+    background-color: rgb(130, 255, 255);
+    border-color: cyan;
+}
+
+.magenta {
+    background-color: rgb(255, 130, 255);
+    border-color: magenta;
+}
+
+.purple {
+    background-color: rgb(180, 85, 180);
+    border-color: purple;
+}
+
+.yellow {
+    background-color: rgb(255, 255, 130);
+    border-color: yellow;
+}
+
+.maroon {
+    background-color: rgb(130, 60, 60);
+    border-color: maroon;
+}
+
+.orange {
+    background-color: rgb(255, 157, 122);
+    border-color: orangered;
+}
+
+.wrong-color {
+    background-color: pink;
+}
+
+.correct {
+    background-color: lightgreen;
+}
+
+.wrong-position {
+    background-color: palegoldenrod;
+}

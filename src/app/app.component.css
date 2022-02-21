@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    border: 1px solid black;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left {
+    padding: 0 10px 0 0;
+}
+
+.right {
+    border: 1px solid black;
+    gap: 0;
+}
+
+/* These below will move to other Angular components */
+
+.answer {
+    border: 1px solid black;
+}
+
+.encoder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid black;
+}
+
