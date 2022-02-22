@@ -1,7 +1,7 @@
 <div class="game">
     <div class="col left">
         <app-solution *ngIf="win" [solution]="solution"></app-solution>
-        <app-encoder (current-attempt)="onAddAttemptCombination($event)"></app-encoder>
+        <app-encoder *ngIf="!win" (current-attempt)="onAddAttemptCombination($event)"></app-encoder>
         <a *ngIf="win" routerLink="">New game</a>
     </div>
     <div class="col right">
