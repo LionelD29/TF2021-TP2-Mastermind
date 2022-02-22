@@ -1,0 +1,10 @@
+<h3>Attempts panel</h3>
+<p>Attempts left: {{ attemptsLeft }}</p>
+<table>
+    <tr *ngFor="let attempt of attempts">
+        <td *ngFor="let cell of attempt"
+            class="{{ cell.status }}">
+            <div class="circle {{ cell.color }}"></div>
+        </td>
+    </tr>
+</table>

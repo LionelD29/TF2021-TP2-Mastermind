@@ -1,11 +1,3 @@
 <h1>Mastermind</h1>
-<div class="container">
-  <div class="col left">
-    <app-solution *ngIf="solutionFound" [solution]="solution"></app-solution>
-    <app-encoder (current-attempt)="onAddAttemptCombination($event)"></app-encoder>
-    <button (click)="onToggleSolution()">Toggle solution</button>
-  </div>
-  <div class="col right">
-    <app-attempts-panel [attempts]="attempts"></app-attempts-panel>
-  </div>
-</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+.game {
+    display: flex;
+    border: 1px solid white;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left {
+    padding: 0 10px 0 0;
+}
+
+.right {
+    border: 1px solid white;
+    gap: 0;
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 body {
     font-size: 0.9rem;
     text-align: center;
@@ -6,6 +8,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: white;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 div {
@@ -26,6 +29,18 @@ table {
 td {
     border: 1px solid white;
     padding: 5px;
+}
+
+a {
+    border: 1px solid white;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
 }
 
 .green {

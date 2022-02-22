@@ -11,6 +11,9 @@ export class AttemptsPanelComponent implements OnInit {
   @Input()
   attempts: Array<Combination> = [];
 
+  @Input()
+  attemptsLeft: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
