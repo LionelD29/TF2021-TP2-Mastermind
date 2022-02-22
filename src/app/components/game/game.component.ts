@@ -10,7 +10,7 @@ import { Combination } from 'src/app/models/combination.model';
 export class GameComponent implements OnInit {
 
   private colors: Array<Color> = [
-    'green', 'blue', 'magenta', 'purple', 'yellow', 'maroon', 'orange'
+    'green', 'blue', 'magenta', 'purple', 'yellow', 'maroon', 'cyan'
   ];
   // solutionFound: boolean = true;
   solution: Combination = [];

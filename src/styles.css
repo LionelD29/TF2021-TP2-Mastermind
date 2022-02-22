@@ -44,42 +44,42 @@ a:hover {
 }
 
 .green {
-    background-color: rgb(39, 155, 39);
-    border-color: lime;
+    background-color: green;
+    border-color: darkgreen;
 }
 
 .blue {
-    background-color: rgb(130, 255, 255);
-    border-color: cyan;
+    background-color: blue;
+    border-color: darkblue;
 }
 
 .magenta {
-    background-color: rgb(255, 130, 255);
-    border-color: magenta;
+    background-color: magenta;
+    border-color: darkmagenta;
 }
 
 .purple {
-    background-color: rgb(180, 85, 180);
-    border-color: purple;
+    background-color: purple;
+    border-color: darkorchid;
 }
 
 .yellow {
-    background-color: rgb(255, 255, 130);
-    border-color: yellow;
+    background-color: yellow;
+    border-color: darkgoldenrod;
 }
 
 .maroon {
-    background-color: rgb(130, 60, 60);
-    border-color: maroon;
+    background-color: maroon;
+    border-color: darkred;
 }
 
-.orange {
-    background-color: rgb(255, 157, 122);
-    border-color: orangered;
+.cyan {
+    background-color: cyan;
+    border-color: darkcyan;
 }
 
 .wrong-color, .reset {
-    background-color: pink;
+    background-color: palevioletred;
 }
 
 .correct, .send {
@@ -87,5 +87,5 @@ a:hover {
 }
 
 .wrong-position {
-    background-color: palegoldenrod;
+    background-color: goldenrod;
 }
