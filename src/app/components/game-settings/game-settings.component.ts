@@ -29,13 +29,17 @@ export class GameSettingsComponent implements OnInit {
 
   onSubmit() {
     // Send the settings to the instance of the service
-    this.settingsService.updateSettings(
-      this.form.value.gameMode,
-      this.form.value.maxNbAttempts,
-      this.form.value.nbAvailableColors
-    );
-
+    let gameMode: 'solo' | 'multi' = this.form.value.gameMode;
+    let maxNbAttempts: number = this.form.value.maxNbAttempts;
+    let nbAvailableColors: number = this.form.value.nbAvailableColors;
+    
+    if (gameMode !== null || maxNbAttempts !== null || nbAvailableColors !== null) {
+      this.settingsService.updateSettings(
+        this.form.value.gameMode,
+        this.form.value.maxNbAttempts,
+        this.form.value.nbAvailableColors
+      );
+    } // else we use the default values in the service. (solo, 10 attempts and 7 colors)
     this.router.navigate(['/game']);
   }
-
 }

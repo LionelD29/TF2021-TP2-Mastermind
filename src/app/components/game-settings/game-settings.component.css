@@ -1,0 +1,21 @@
+form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+select, input {
+    width: 100%;
+}
+
+button {
+    border: 1px solid white;
+    background-color: black;
+    padding: 5px 10px;
+    color: white;
+}
+
+button:hover {
+    border-color: black;
+    background-color: white;
+    color: black;
+}
