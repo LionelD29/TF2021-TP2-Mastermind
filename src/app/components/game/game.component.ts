@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Color } from 'src/app/models/color.model';
 import { Combination } from 'src/app/models/combination.model';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'app-game',
@@ -13,12 +14,22 @@ export class GameComponent implements OnInit {
     'green', 'blue', 'magenta', 'purple', 'yellow', 'maroon', 'cyan'
   ];
   // solutionFound: boolean = true;
-  solution: Combination = [];
-  attempts: Array<Combination> = [];
-  win: boolean | undefined = undefined;
-  attemptsLeft: number = 10;
+  solution!: Combination;
+  attempts!: Array<Combination>;
+  win!: boolean | undefined;
+  maxNbAttemps!: number;
+  attemptsLeft!: number;
+
+  constructor(private settingsService: SettingsService) {}
 
   ngOnInit(): void {
+    this.solution = [];
+    this.attempts = [];
+    this.win = undefined;
+    
+    this.maxNbAttemps = this.settingsService.getSettings().maxNbAttempts;
+    this.attemptsLeft = this.maxNbAttemps;
+
     // Generate random combination
     let randomIndex: number;
     for (let i = 0; i < 4; i++) {
@@ -72,10 +83,8 @@ export class GameComponent implements OnInit {
             }
           }
           // If no wrong-position is found, it is therefore a wrong-color
-          console.log(wrongCount);
           if (wrongCount === attempt.length) {
             attempt[i].status = 'wrong-color';
-            console.log('hello');
           }
           wrongCount = 0;
         }

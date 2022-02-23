@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { GameSettingsComponent } from './components/game-settings/game-settings.component';
 import { GameComponent } from './components/game/game.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SettingsService } from './services/settings.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,13 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    SettingsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

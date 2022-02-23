@@ -1,8 +1,8 @@
 <div class="game">
     <div class="col left">
-        <app-solution *ngIf="win" [solution]="solution"></app-solution>
-        <app-encoder *ngIf="!win" (current-attempt)="onAddAttemptCombination($event)"></app-encoder>
-        <a *ngIf="win" routerLink="">New game</a>
+        <app-solution *ngIf="win !== undefined" [solution]="solution"></app-solution>
+        <app-encoder *ngIf="win === undefined" (current-attempt)="onAddAttemptCombination($event)"></app-encoder>
+        <a *ngIf="win !== undefined" routerLink="">New game</a>
     </div>
     <div class="col right">
         <app-attempts-panel [attempts]="attempts" [attemptsLeft]="attemptsLeft"></app-attempts-panel>

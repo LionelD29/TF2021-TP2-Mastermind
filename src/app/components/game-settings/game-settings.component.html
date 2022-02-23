@@ -1,5 +1,35 @@
 <h2>Settings</h2>
 
-<!-- More job to be done here -->
+<!-- Add a reactive form here -->
+<!-- * Mode: Singleplayer (randomly generated combination) -->
+<!--         Multiplayer (player2-generated combination) -->
+<!-- * Max number of attempts -->
+<!--         For large numbers, it should be a good idea to make a scroll bar within -->
+<!--         the attempts panel, to avoid displaying too many useless attempts -->
+<!-- * Number of available colors (between 4 and 7) -->
 
-<a routerLink="/game">Play</a>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="input-mode">Game mode: (Yet inactive)</label>
+        <select id="input-mode" formControlName="gameMode">
+            <option value="solo">Solo</option>
+            <option value="multi">Multi</option>
+        </select>
+    </div>
+    <div>
+        <label for="input-nb-attempts">Number of attempts: </label>
+        <input type="number"
+                id="input-nb-attempts"
+                formControlName="maxNbAttempts">
+    </div>
+    <div>
+        <label for="input-available-colors">Number of available colors: (Yet inactive)</label>
+        <select id="input-available-colors" formControlName="nbAvailableColors">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+    </div>
+    <button type="submit">Set and play</button>
+</form>
