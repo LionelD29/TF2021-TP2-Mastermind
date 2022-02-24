@@ -13,6 +13,7 @@ export class GameComponent implements OnInit {
   private colors: Array<Color> = [
     'green', 'blue', 'magenta', 'purple', 'yellow', 'maroon', 'cyan'
   ];
+  availableColors!: Array<Color>;
   // solutionFound: boolean = true;
   solution!: Combination;
   attempts!: Array<Combination>;
@@ -30,20 +31,30 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     this.solution = [];
     this.attempts = [];
+    this.availableColors = [];
     this.win = undefined;
 
     this.settings = this.settingsService.getSettings();
 
+    // Set the number of attempts
     this.attemptsLeft = this.settings.maxNbAttempts;
 
+    // Set the available colors, according to the settings
+    if (this.settings.nbAvailableColors !== 7) {
+      this.availableColors = this.colors.slice(0, this.settings.nbAvailableColors);
+    } else {
+      this.availableColors = this.colors
+    }
+
+    // Set the gamemode, and if multiplayer, no random secret code is generated (it has to be created by a player)
     if (this.settings.gameMode === 'solo') {
       // Generate random combination
       let randomIndex: number;
       for (let i = 0; i < 4; i++) {
         // generate a random number in the range 0 - 6
-        randomIndex = Math.floor(Math.random() * (this.colors.length));
+        randomIndex = Math.floor(Math.random() * (this.availableColors.length));
         this.solution.push({
-          color: this.colors[randomIndex],
+          color: this.availableColors[randomIndex],
           status: undefined
         })
       }

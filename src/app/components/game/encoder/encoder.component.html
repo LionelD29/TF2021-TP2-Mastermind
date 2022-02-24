@@ -8,8 +8,20 @@
         <td><div class="circle {{ currentCombination[3] ? currentCombination[3].color : '' }}"></div></td>
       </tr>
     </table><!-- Screen -->
+
+    <div class="pad">
+      <div *ngFor="let color of colors">
+        <div (click)="onSelectingColor(color)" class="btn circle {{ color }}"></div>
+      </div>
+      <div>
+        <div (click)="onResetCombination()" class="btn circle reset"><p>R</p></div>
+      </div>
+      <div>
+        <div (click)="onSendCombination()" class="btn circle send"><p>S</p></div>
+      </div>
+    </div>
     
-    <table>
+    <!-- <table>
       <tr>
         <td><div (click)="onSelectingColor('green')" class="btn circle green"></div></td>
         <td><div (click)="onSelectingColor('blue')" class="btn circle blue"></div></td>
@@ -21,10 +33,15 @@
         <td><div (click)="onSelectingColor('maroon')" class="btn circle maroon"></div></td>
       </tr>
       <tr>
-        <td (click)="onResetCombination()" class="btn reset">Reset</td>
         <td><div (click)="onSelectingColor('cyan')" class="btn circle cyan"></div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td (click)="onResetCombination()" class="btn reset">Reset</td>
         <td (click)="onSendCombination()" class="btn send">Send</td>
       </tr>
-    </table><!-- encoding pad -->
+    </table> encoding pad
+    -->
 
   </div>

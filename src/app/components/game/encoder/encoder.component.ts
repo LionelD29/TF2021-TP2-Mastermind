@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Color } from 'src/app/models/color.model';
 import { Combination } from 'src/app/models/combination.model';
 
@@ -10,6 +10,9 @@ import { Combination } from 'src/app/models/combination.model';
 export class EncoderComponent implements OnInit {
 
   currentCombination: Combination = [];
+
+  @Input('available-colors')
+  colors!: Array<Color>;
 
   @Output('current-attempt')
   emitter = new EventEmitter<Combination>();
