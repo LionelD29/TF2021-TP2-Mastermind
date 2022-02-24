@@ -1,1 +1,2 @@
-export type Color = 'green' | 'blue' | 'magenta' | 'purple' | 'yellow' | 'maroon' | 'cyan' | undefined;
+export type Color = 'purple' | 'blue' | 'cyan' | 'green' | 'yellow' | 'orange' | 'red' | undefined;
+

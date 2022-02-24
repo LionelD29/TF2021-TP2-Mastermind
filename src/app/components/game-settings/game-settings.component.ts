@@ -32,13 +32,26 @@ export class GameSettingsComponent implements OnInit {
     let gameMode: 'solo' | 'multi' = this.form.value.gameMode;
     let maxNbAttempts: number = this.form.value.maxNbAttempts;
     let nbAvailableColors: number = this.form.value.nbAvailableColors;
-    
-    this.settingsService.updateSettings(
-      gameMode !== null ? gameMode : 'solo',
-      maxNbAttempts !== null ? maxNbAttempts : 10,
-      nbAvailableColors !== null ? nbAvailableColors : 7
-    );
 
-    this.router.navigate(['/game']);
+    console.log(maxNbAttempts);
+    
+    let validAttemptsNumber: boolean = maxNbAttempts !== null && maxNbAttempts > 0 && maxNbAttempts <= 15;
+    if (validAttemptsNumber) {
+      this.settingsService.updateSettings(
+        gameMode !== null ? gameMode : 'solo',
+        maxNbAttempts,
+        nbAvailableColors !== null ? nbAvailableColors : 7
+      );
+      this.router.navigate(['/game']);
+    } else if (maxNbAttempts === null) {
+      this.settingsService.updateSettings(
+        gameMode !== null ? gameMode : 'solo',
+        10,
+        nbAvailableColors !== null ? nbAvailableColors : 7
+      );
+      this.router.navigate(['/game']);
+    } else {
+      alert('Please select a number of attempts between 0 and 16 excluded');
+    }
   }
 }

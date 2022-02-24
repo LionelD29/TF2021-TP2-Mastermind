@@ -11,7 +11,7 @@ import { SettingsService } from 'src/app/services/settings.service';
 export class GameComponent implements OnInit {
 
   private colors: Array<Color> = [
-    'green', 'blue', 'magenta', 'purple', 'yellow', 'maroon', 'cyan'
+    'purple', 'blue', 'cyan', 'green', 'red', 'orange', 'yellow'
   ];
   availableColors!: Array<Color>;
   // solutionFound: boolean = true;
