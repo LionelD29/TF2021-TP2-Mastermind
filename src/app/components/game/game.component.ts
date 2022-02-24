@@ -17,8 +17,13 @@ export class GameComponent implements OnInit {
   solution!: Combination;
   attempts!: Array<Combination>;
   win!: boolean | undefined;
-  maxNbAttemps!: number;
   attemptsLeft!: number;
+
+  settings!: {
+    gameMode: 'solo' | 'multi';
+    maxNbAttempts: number;
+    nbAvailableColors: number;
+  }
 
   constructor(private settingsService: SettingsService) {}
 
@@ -26,33 +31,44 @@ export class GameComponent implements OnInit {
     this.solution = [];
     this.attempts = [];
     this.win = undefined;
-    
-    this.maxNbAttemps = this.settingsService.getSettings().maxNbAttempts;
-    this.attemptsLeft = this.maxNbAttemps;
 
-    // Generate random combination
-    let randomIndex: number;
-    for (let i = 0; i < 4; i++) {
-      // generate a random number in the range 0 - 6
-      randomIndex = Math.floor(Math.random() * (this.colors.length));
-      this.solution.push({
-        color: this.colors[randomIndex],
-        status: undefined
-      })
+    this.settings = this.settingsService.getSettings();
+
+    this.attemptsLeft = this.settings.maxNbAttempts;
+
+    if (this.settings.gameMode === 'solo') {
+      // Generate random combination
+      let randomIndex: number;
+      for (let i = 0; i < 4; i++) {
+        // generate a random number in the range 0 - 6
+        randomIndex = Math.floor(Math.random() * (this.colors.length));
+        this.solution.push({
+          color: this.colors[randomIndex],
+          status: undefined
+        })
+      }
+    } else {
+      alert('game mode: multiplayer ||| Player 2 must select a solution to be found by player 1');
     }
   }
 
   onAddAttemptCombination(combination: Combination): void {
-    this.attempts.push(this.checkAttempt(combination));
-    this.attemptsLeft--;
-    if (this.attemptsLeft === 0 && this.win == undefined) {
-      this.win = false;
+    if (this.solution.length === 0 && this.settings.gameMode === 'multi') { // Selection of the solution by a player
+      this.solution = combination;
+      alert('The solution has been chosen by player 2');
+    } else {
+      this.attempts.push(this.checkAttempt(combination));
+      this.attemptsLeft--;
+      if (this.attemptsLeft === 0 && this.win == undefined) {
+        this.win = false;
+      }
+      if (this.win === true) {
+        alert('You win! Congratulation!');
+      } else if (this.win === false) {
+        alert('You lost... More luck next time!');
+      }
     }
-    if (this.win === true) {
-      alert('You win! Congratulation!');
-    } else if (this.win === false) {
-      alert('You lost... More luck next time!');
-    }
+    
   }
 
   checkAttempt(attempt: Combination): Combination {

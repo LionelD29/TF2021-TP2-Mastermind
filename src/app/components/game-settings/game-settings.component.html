@@ -10,8 +10,8 @@
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div>
-        <label for="input-mode">Game mode: (Yet inactive) (default: solo)</label>
-        <select id="input-mode" formControlName="gameMode"autofocus>
+        <label for="input-mode">Game mode: (default: solo)</label>
+        <select id="input-mode" formControlName="gameMode" autofocus>
             <option value="solo">Solo</option>
             <option value="multi">Multi</option>
         </select>
@@ -19,6 +19,7 @@
     <div>
         <label for="input-nb-attempts">Number of attempts: (default: 10)</label>
         <input type="number"
+                placeholder="10"
                 id="input-nb-attempts"
                 formControlName="maxNbAttempts">
     </div>
