@@ -11,21 +11,21 @@
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div>
-        <label for="input-mode">Game mode: (default: solo)</label>
+        <label for="input-mode">Game mode: (default: solo)</label><br>
         <select id="input-mode" formControlName="gameMode" autofocus>
             <option value="solo">Solo</option>
             <option value="multi">Multi</option>
         </select>
     </div>
     <div>
-        <label for="input-nb-attempts">Number of attempts: (default: 10)</label>
+        <label for="input-nb-attempts">Number of attempts: (default: 10)</label><br>
         <input type="number"
                 placeholder="10"
                 id="input-nb-attempts"
                 formControlName="maxNbAttempts">
     </div>
     <div>
-        <label for="input-available-colors">Number of available colors: (default: 7)</label>
+        <label for="input-available-colors">Number of available colors: (default: 7)</label><br>
         <select id="input-available-colors" formControlName="nbAvailableColors">
             <option value="4">4</option>
             <option value="5">5</option>

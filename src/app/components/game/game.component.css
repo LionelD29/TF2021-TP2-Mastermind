@@ -20,3 +20,19 @@
     border: 1px solid white;
     gap: 0;
 }
+
+@media screen and (max-width: 1050px) {
+    .game {
+        flex-direction: column-reverse;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .left, .right {
+        padding: 0;
+        margin: 0;
+    }
+    .right {
+        margin-bottom: 10px;
+    }
+}
