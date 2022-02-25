@@ -1,0 +1,25 @@
+a {
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0 0 2px 0;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+a:hover {
+    background-color: initial;
+    color: whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+}
+
+nav {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+hr {
+    border: 1px solid white;
+}

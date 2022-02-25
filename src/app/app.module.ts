@@ -11,6 +11,9 @@ import { GameComponent } from './components/game/game.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SettingsService } from './services/settings.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { RulesComponent } from './components/rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SettingsService } from './services/settings.service';
     AttemptsPanelComponent,
     GameSettingsComponent,
     GameComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    NavbarComponent,
+    HomeComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
