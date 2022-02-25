@@ -5,7 +5,8 @@
         <app-encoder *ngIf="win === undefined" 
                     (current-attempt)="onAddAttemptCombination($event)"
                     [available-colors]="availableColors"></app-encoder>
-        <a *ngIf="win !== undefined" routerLink="">New game</a>
+        <a *ngIf="win !== undefined" routerLink="/home">Home</a>
+        <a *ngIf="win !== undefined" routerLink="/settings">New game</a>
     </div>
     <div class="col right">
         <app-attempts-panel [attempts]="attempts" [attemptsLeft]="attemptsLeft"></app-attempts-panel>

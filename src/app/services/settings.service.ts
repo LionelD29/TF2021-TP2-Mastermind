@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Settings } from '../models/settings.model';
 
 @Injectable()
 export class SettingsService {
 
-  private settings: {
-    gameMode: 'solo' | 'multi';
-    maxNbAttempts: number;
-    nbAvailableColors: number;
-  } = {
+  private settings: Settings = {
     gameMode: 'solo',
     maxNbAttempts: 10,
     nbAvailableColors: 7

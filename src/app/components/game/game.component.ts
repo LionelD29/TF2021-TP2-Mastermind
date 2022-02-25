@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Color } from 'src/app/models/color.model';
 import { Combination } from 'src/app/models/combination.model';
+import { Settings } from 'src/app/models/settings.model';
 import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
@@ -20,11 +21,7 @@ export class GameComponent implements OnInit {
   win!: boolean | undefined;
   attemptsLeft!: number;
 
-  settings!: {
-    gameMode: 'solo' | 'multi';
-    maxNbAttempts: number;
-    nbAvailableColors: number;
-  }
+  settings!: Settings;
 
   constructor(private settingsService: SettingsService) {}
 
