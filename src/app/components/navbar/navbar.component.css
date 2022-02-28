@@ -1,6 +1,7 @@
 a {
     border: none;
     border-bottom: 2px solid transparent;
+    border-radius: 0;
     padding: 0 0 2px 0;
     margin: 0;
     font-size: 1.1rem;

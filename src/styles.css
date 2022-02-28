@@ -23,12 +23,12 @@ div {
 }
 
 table {
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
 }
 
 td {
-    border: 1px solid white;
     padding: 5px;
+    /* margin: 10px; */
 }
 
 a {
@@ -36,6 +36,7 @@ a {
     padding: 5px 10px;
     text-decoration: none;
     color: white;
+    border-radius: 5px;
 }
 
 a:hover {
@@ -45,45 +46,47 @@ a:hover {
 
 .green {
     background-color: green;
-    border-color: darkgreen;
+    border-color: transparent;
 }
 
 .blue {
     background-color: blue;
-    border-color: darkblue;
+    border-color: transparent;
 }
 
 .orange {
     background-color: orange;
-    border-color: orangered;
+    border-color: transparent;
 }
 
 .purple {
     background-color: purple;
-    border-color: darkorchid;
+    border-color: transparent;
 }
 
 .yellow {
     background-color: yellow;
-    border-color: darkgoldenrod;
+    border-color: transparent;
 }
 
 .red {
     background-color: red;
-    border-color: darkred;
+    border-color: transparent;
 }
 
 .cyan {
     background-color: cyan;
-    border-color: darkcyan;
+    border-color: transparent;
 }
 
 .wrong-color, .reset {
-    background-color: palevioletred;
+    background-color: lightcoral;
+    border-color: transparent;
 }
 
 .correct, .send {
     background-color: lightgreen;
+    border-color: transparent;
 }
 
 .wrong-position {

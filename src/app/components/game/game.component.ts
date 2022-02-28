@@ -71,7 +71,7 @@ export class GameComponent implements OnInit {
         this.win = false;
       }
       if (this.win === true) {
-        alert('You win! Congratulation!');
+        alert('You win! Congratulations!');
       } else if (this.win === false) {
         alert('You lost... More luck next time!');
       }
