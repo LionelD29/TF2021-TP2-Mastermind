@@ -1,0 +1,16 @@
+td > div {
+    background-color: #eee;
+}
+
+.hint {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.hints {
+    width: fit-content;
+    margin: auto;
+    text-align: justify;
+}
