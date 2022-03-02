@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Settings } from '../models/settings.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SettingsService {
 
   private settings: Settings = {

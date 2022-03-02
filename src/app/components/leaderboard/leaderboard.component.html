@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<h2>Leaderboard</h2>
+
+<div class="records">
+    <div *ngFor="let record of records"
+         class="record" 
+         [ngStyle]="{'color': record.hasWon ? 'lightgreen' : 'lightcoral'}">
+        <p>
+            <span>Player</span>: {{ record.playerName }} 
+            | <span>Total attempts</span>: {{ record.totalAttempts }} 
+            | <span>Attempts left</span>: {{ record.attemptsLeft }}
+        </p>
+    </div>
+</div>
+<button (click)="onClick()">add</button>

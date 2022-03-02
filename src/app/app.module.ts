@@ -1,19 +1,23 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { SolutionComponent } from './components/game/solution/solution.component';
-import { EncoderComponent } from './components/game/encoder/encoder.component';
-import { AttemptsPanelComponent } from './components/game/attempts-panel/attempts-panel.component';
 import { AppRoutingModule } from './app-routing.module';
-import { GameSettingsComponent } from './components/game-settings/game-settings.component';
-import { GameComponent } from './components/game/game.component';
+import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SettingsService } from './services/settings.service';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { GameSettingsComponent } from './components/game-settings/game-settings.component';
+import { AttemptsPanelComponent } from './components/game/attempts-panel/attempts-panel.component';
+import { EncoderComponent } from './components/game/encoder/encoder.component';
+import { GameComponent } from './components/game/game.component';
+import { SolutionComponent } from './components/game/solution/solution.component';
 import { HomeComponent } from './components/home/home.component';
+import { LeaderboardComponent } from './components/leaderboard/leaderboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { RulesComponent } from './components/rules/rules.component';
+import { LeaderboardService } from './services/leaderboard.service';
+import { SettingsService } from './services/settings.service';
+
 
 @NgModule({
   declarations: [
@@ -26,16 +30,19 @@ import { RulesComponent } from './components/rules/rules.component';
     ErrorPageComponent,
     NavbarComponent,
     HomeComponent,
-    RulesComponent
+    RulesComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
-    SettingsService
+    SettingsService,
+    LeaderboardService
   ],
   bootstrap: [AppComponent]
 })

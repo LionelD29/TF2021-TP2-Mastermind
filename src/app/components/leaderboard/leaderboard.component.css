@@ -1,0 +1,11 @@
+.record {
+    width: 70%;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0 auto 10px;
+    font-size: 1.2rem;
+}
+
+.record > span {
+    font-weight: bold;
+}
