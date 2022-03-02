@@ -24,7 +24,7 @@ public class MastermindServiceImpl implements MastermindService {
     public List<GameRecord> getAll() {
         List<GameRecord> l;
 
-        String query = "SELECT * FROM leaderbord";
+        String query = "SELECT * FROM leaderboard";
 
         try (
                 Connection connection = ConnectionFactory.getConnection();
